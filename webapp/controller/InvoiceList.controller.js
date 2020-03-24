@@ -16,6 +16,7 @@ sap.ui.define([
 		},
 		onFilterInvoices : function (oEvent) {
 			// build filter array
+			// construir matriz de filtro
 			var aFilter = [];
 			var sQuery = oEvent.getParameter("query");
 			
@@ -24,6 +25,7 @@ sap.ui.define([
 			}
 
 			// filter binding
+			// filtro de ligação
 			var oList = this.byId("invoiceList");
 			var oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);

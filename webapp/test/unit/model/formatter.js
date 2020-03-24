@@ -20,6 +20,10 @@ sap.ui.define([
         // Arrange
         // this.stub() does not support chaining and always returns the right data
         // even if a wrong or empty parameter is passed.
+
+        // Organizar
+        // this.stub () não suporta encadeamento e sempre retorna os dados corretos
+        // mesmo se um parâmetro errado ou vazio for passado.
         var oModel = this.stub();
         oModel.withArgs("i18n").returns(this._oResourceModel);
         var oViewStub = {
@@ -30,9 +34,11 @@ sap.ui.define([
         };
 
         // System under test
+        // Sistema em teste
         var fnIsolatedFormatter = formatter.statusText.bind(oControllerStub);
 
         // Assert
+        // Organizar
         assert.strictEqual(fnIsolatedFormatter("A"), "New", "The long text for status A is correct");
         assert.strictEqual(fnIsolatedFormatter("B"), "In Progress", "The long text for status B is correct");
         assert.strictEqual(fnIsolatedFormatter("C"), "Done", "The long text for status C is correct");

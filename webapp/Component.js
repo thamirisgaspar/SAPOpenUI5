@@ -11,8 +11,10 @@ sap.ui.define([
         },
         init : function () {
             // call the init function of the parent
+            // chama a função init do pai
             UIComponent.prototype.init.apply(this, arguments);
             // set data model
+            // define o modelo de dados
             var oData = {
                 recipient : {
                     name : ""
@@ -22,18 +24,18 @@ sap.ui.define([
             var oModel = new JSONModel(oData);
             this.setModel(oModel);
 
-            // disable batch grouping for v2 API of the northwind service
-			//this.getModel("invoice").setUseBatch(false);
-
-			// set device model
+            // set device model
+            // defineo modelo do dispositivo
 			var oDeviceModel = new JSONModel(Device);
 			oDeviceModel.setDefaultBindingMode("OneWay");
 			this.setModel(oDeviceModel, "device");
 
             // set dialog
+            // define a caixa de diálogo
             this._helloDialog = new HelloDialog(this.getRootControl());
             
             // create the views based on the url/hash
+            // cria as visualizações com base no URL / hash
 			this.getRouter().initialize();
         },
         exit : function() {
