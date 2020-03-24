@@ -4,5 +4,10 @@
     <Dialog
         id="helloDialog"
         title="{i18n>saudation} {/recipient/name}">
+        <beginButton>
+            <Button
+                text="{i18n>dialogCloseButtonText}"
+                press=".onCloseDialog"/>
+        </beginButton>
     </Dialog>
 </core:FragmentDefinition>
