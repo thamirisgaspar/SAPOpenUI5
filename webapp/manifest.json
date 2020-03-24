@@ -92,6 +92,10 @@
                     "viewName": "Detail"
                 }
             }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
         }
     }
 }
